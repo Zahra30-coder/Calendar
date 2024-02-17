@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Add Holiday</h5>
+      <form (ngSubmit)="addHoliday()" #holidayForm="ngForm">
+        <div class="form-group">
+          <label for="title" class="form-control-label">Title:</label>
+          <input type="text" class="form-control form-control-alternative" id="title" name="title" [(ngModel)]="holidayTitle" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="start" class="form-control-label">Start Date:</label>
+          <input type="date" class="form-control form-control-alternative" id="start" name="start" [(ngModel)]="holidayDate" (input)="updateNumberOfDays()" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="end" class="form-control-label">End Date:</label>
+          <input type="date" class="form-control form-control-alternative" id="end" name="end" [(ngModel)]="holidayEndDate" (input)="updateNumberOfDays()" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="numberOfDays" class="form-control-label">Number of Days:</label>
+          <input type="number" class="form-control form-control-alternative" id="numberOfDays" name="numberOfDays" [(ngModel)]="numberOfDays" readonly>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Add Holiday</button>
+      </form>
+    </div>
+  </div>
+  
